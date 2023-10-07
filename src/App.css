@@ -9,7 +9,6 @@
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  color: white;
   padding: 2rem 4rem;
   text-align: center;
   box-sizing: border-box;
@@ -30,4 +29,23 @@
 
 .code-button {
   cursor: pointer;
+  box-sizing: content-box;
+}
+
+.css-button {
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.control-box-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+}
+
+.css-button h1 {
+  margin: 0;
 }
