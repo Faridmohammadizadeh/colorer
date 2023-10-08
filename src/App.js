@@ -46,7 +46,6 @@ function App() {
       "border-radius": "8px",
       background: `linear-gradient(240deg, #ffffff, ${color1})`,
       "box-shadow": `-9px 9px 45px ${color1} , 9px -9px 18px #ffffff`,
-      border: copied1 ? "1.5px solid #05ff00" : "white",
     };
 
     // colorpicker 2 settings
@@ -62,7 +61,6 @@ function App() {
       "border-radius": "8px",
       background: `linear-gradient(125deg, #ffffff, ${color2})`,
       "box-shadow": `-9px 9px 45px ${color2} , 9px -9px 18px #ffffff`,
-      border: copied2 ? "1.5px solid #05ff00" : "white",
     };
 
     let grad = {
@@ -85,8 +83,32 @@ function App() {
     let copyCssButton = {
       background: `linear-gradient(to left, ${color2}, ${color1})`,
       "box-shadow": `-9px 9px 22px #d1d1d1, 9px 9px 22px #e9e9e9  `,
-      border: copiedCss ? "1.5px solid #05ff00" : "",
     };
+
+    // color buttons------------
+    function Pallets() {
+      const colorslist = [
+        { c1: "#de71ff", c2: "#6fe2f2" },
+        { c1: "#20ff6c", c2: "#32e7ff" },
+        { c1: "#f5ff38", c2: "#ff74e0" },
+        { c1: "#6d3dbb", c2: "#ff4747" },
+      ];
+      return (
+        <div className="pallets-container">
+          {colorslist.map((each) => (
+            <button
+              style={{
+                background: `linear-gradient(to right, ${each.c1}, ${each.c2})`,
+              }}
+              onClick={() => {
+                setColor1(each.c1);
+                setColor2(each.c2);
+              }}
+            ></button>
+          ))}
+        </div>
+      );
+    }
 
     return (
       <>
@@ -104,20 +126,27 @@ function App() {
                 }}
               />
               <CopyToClipboard onCopy={onCopy1} text={color1} onClick={clicked}>
-                <h1 style={{ ...styler1 }} className="code-button">
-                  {color1}
-                </h1>
+                <div className="card" style={{ ...styler1 }}>
+                  <h1 className="code-button">{color1}</h1>
+                  <span style={{ color: color1 }}>
+                    {copied1 ? "copyed" : "copy"}
+                  </span>
+                </div>
               </CopyToClipboard>
             </div>
 
             <div className="control-box-buttons">
+              <Pallets />
               <CopyToClipboard
                 onCopy={onCopyCss}
-                text={`linear-gradient(#${color1}, ${color2})`}
+                text={`linear-gradient(${color1}, ${color2})`}
                 onClick={clicked}
               >
-                <div className="css-button" style={{ ...copyCssButton }}>
-                  <h1>copy css</h1>
+                <div className="css-button card" style={{ ...copyCssButton }}>
+                  <h2 style={{ margin: "1rem 2rem" }}>copy css</h2>
+                  <span style={{ color: "#05ff00" }}>
+                    {copiedCss ? "copyed" : "copy"}
+                  </span>
                 </div>
               </CopyToClipboard>
             </div>
@@ -132,9 +161,12 @@ function App() {
                 }}
               />
               <CopyToClipboard onCopy={onCopy2} text={color2} onClick={clicked}>
-                <h1 style={{ ...styler2 }} className="code-button">
-                  {color2}
-                </h1>
+                <div className="card" style={{ ...styler2 }}>
+                  <h1 className="code-button">{color2}</h1>
+                  <span style={{ color: color2 }}>
+                    {copied2 ? "copyed" : "copy"}
+                  </span>
+                </div>
               </CopyToClipboard>
             </div>
           </div>

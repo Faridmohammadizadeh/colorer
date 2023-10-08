@@ -27,25 +27,124 @@
   justify-content: center;
 }
 
-.code-button {
-  cursor: pointer;
-  box-sizing: content-box;
-}
-
 .css-button {
   border-radius: 8px;
   padding: 2rem 1.5rem;
   color: white;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 .control-box-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding-bottom: 2rem;
 }
 
 .css-button h1 {
   margin: 0;
 }
+
+/* color code buttons design */
+.card {
+  max-width: 23ch;
+  text-align: center;
+  padding: 1em 0.5rem;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.card h1 {
+  margin: 0;
+}
+
+.card > :not(span) {
+  transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+.card span {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-weight: bold;
+  top: 100%;
+  transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+.card:hover span {
+  top: 0;
+  font-size: 1.8rem;
+  background-color: white;
+}
+
+.card:hover > div,
+.card:hover > h1 {
+  opacity: 0;
+}
+/* color code buttons design end */
+
+/* pallet buttons design */
+button {
+  height: 3rem;
+  width: 3rem;
+  border: none;
+  border-radius: 10em;
+  margin: 0.5rem 1rem;
+}
+
+button:hover {
+  animation: shake3856 0.3s linear infinite both;
+}
+
+@keyframes shake3856 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+.pallets-container {
+  margin: auto auto;
+}
+
+/* pallet buttons design end*/
