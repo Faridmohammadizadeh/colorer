@@ -3,6 +3,7 @@ import "./App.css";
 import { useState, useEffect, useCallback } from "react";
 import { HexColorPicker } from "react-colorful";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { Link } from "react-router-dom";
 
 function App() {
   // screen size ----------------------------------
@@ -97,6 +98,7 @@ function App() {
         <div className="pallets-container">
           {colorslist.map((each) => (
             <button
+              className="pallet-btns"
               style={{
                 background: `linear-gradient(to right, ${each.c1}, ${each.c2})`,
               }}
@@ -116,7 +118,12 @@ function App() {
     return (
       <>
         <div className="main" style={{ ...grad }}>
-          <h1 style={{ color: "white" }}>enjoy!</h1>
+          <div>
+            <button class="btn-nav-on">GRADIANT</button>
+            <Link to="/skatch">
+              <button class="btn-nav">SKATCH</button>
+            </Link>
+          </div>
 
           <div className="control-box" style={{ ...controlerColor }}>
             <div className="input-color">

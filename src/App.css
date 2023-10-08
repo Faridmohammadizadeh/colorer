@@ -99,7 +99,7 @@
 /* color code buttons design end */
 
 /* pallet buttons design */
-button {
+.pallet-btns {
   height: 3rem;
   width: 3rem;
   border: none;
@@ -107,7 +107,7 @@ button {
   margin: 0.5rem 1rem;
 }
 
-button:hover {
+.pallet-btns:hover {
   animation: shake3856 0.3s linear infinite both;
 }
 
@@ -148,3 +148,83 @@ button:hover {
 }
 
 /* pallet buttons design end*/
+
+/* navbar buttons design */
+.btn-nav {
+  position: relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: rgb(118, 118, 118);
+  background-color: white;
+  width: 10rem;
+  margin: 0.5rem 1rem;
+}
+
+.btn-nav-on {
+  position: relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: #05ff00;
+  background-color: white;
+  width: 10rem;
+  margin: 0.5rem 1rem;
+}
+
+.btn-nav:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-nav:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-nav::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-nav::after {
+  background-color: #fff;
+}
+
+.btn-nav:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+/* navbar buttons design end*/
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 4rem;
+  text-align: center;
+  box-sizing: border-box;
+}

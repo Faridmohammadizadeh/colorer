@@ -11,7 +11,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/skeleton" element={<Skeleton />} />
+      <Route path="/skatch" element={<Skeleton />} />
     </Routes>
   </BrowserRouter>
 );
