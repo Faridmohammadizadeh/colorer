@@ -103,6 +103,9 @@ function App() {
               onClick={() => {
                 setColor1(each.c1);
                 setColor2(each.c2);
+                setCopied1(false);
+                setCopied2(false);
+                setCopiedCss(false);
               }}
             ></button>
           ))}
