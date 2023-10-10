@@ -15,7 +15,7 @@
 }
 
 .control-box {
-  padding: 4rem 6rem 1rem 6rem;
+  padding: 1rem 6rem 1rem 6rem;
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -224,7 +224,102 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 2rem 4rem;
+  padding: 0rem 4rem;
   text-align: center;
   box-sizing: border-box;
+}
+
+/* SKatch------------------------------------------------------ */
+
+.control-section {
+  justify-content: center;
+  text-align: center;
+}
+
+.skatch-body {
+  width: 80%;
+  margin: auto auto;
+  border-radius: 2rem;
+}
+
+.skatch-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.skatch-nav-item-container {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  padding: 0.5rem 2rem;
+}
+
+.skatch-nav-item {
+  width: 10%;
+  height: 1rem;
+  margin: auto 1rem;
+  border-radius: 1rem;
+}
+
+.skatch-nav-btn {
+  width: 20%;
+  height: 2rem;
+  margin: auto 1rem;
+  border-radius: 1rem;
+}
+
+.skatch-banner {
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2rem;
+}
+
+.circle-one {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 100%;
+  paddin: auto auto;
+  position: relative;
+}
+.skatch-banner-title {
+  height: 3rem;
+  background-color: #05ff00;
+  border-radius: 1rem;
+  position: absolute;
+  left: -20;
+  margin-left: 10rem;
+}
+
+.skatch-banner-info {
+  border-radius: 1.5rem;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 0;
+}
+.skatch-banner-text {
+  width: 100%;
+  height: 1rem;
+  margin: 0.75rem 0;
+  border-radius: 0.4rem;
+}
+
+.skatch-banner-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.skatch-banner-button {
+  border-radius: 1rem;
+  width: 20%;
+  padding: 0.4rem 1rem;
+  margin-top: 2rem;
 }

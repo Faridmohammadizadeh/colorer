@@ -118,7 +118,7 @@ function App() {
     return (
       <>
         <div className="main" style={{ ...grad }}>
-          <div>
+          <div className="navbar-container">
             <button class="btn-nav-on">GRADIANT</button>
             <Link to="/skatch">
               <button class="btn-nav">SKATCH</button>
